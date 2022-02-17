@@ -7,6 +7,7 @@ const Checkbox = (props) => {
     const [technologies,] = useState(['java', 'hibernate', 'laravel', 'angular', 'jquery', 'reactjs', 'asp.net', 'spring', 'springboot', 'flutter', 'xamarin', 'kotlin', 'vuejs', 'plsql', 'oracle', 'expressjs', 'nodejs', 'mysql', 'swift', 'mariadb'])
     const [skills, setSkills] = useState([])
     
+
     const handleChange = (event) => {
         let updatedList = [...skills]
         if (event.target.checked) {

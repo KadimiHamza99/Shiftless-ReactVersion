@@ -7,15 +7,17 @@ import Navbar from '../Components/Navbar';
 const Match = () => {
 
     const [matchData,setMatchData] = useState([])
+    const [match,setMatch] = useState(false)
 
     const matchingData = (data) => {
+        setMatch(true)
         setMatchData(data)
     }
     return (
         <div>
             <Navbar />
             <Checkbox matchingData={matchingData}/>
-            <MatchTable matchData={matchData}/>
+            {match ? <MatchTable matchData={matchData}/> : <span/>}
             <Footer />
         </div>
     );
